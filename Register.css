@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+#BODY{
+    /*text-align:center;*/
+    background: #fff url("TMALL/01.jpg") center center no-repeat;
+    margin-left: 500px;
+    margin-top: 100px;
+}
+#TABLE{
+    text-align:left;
+    /*margin: auto;*/
+    float:left;
+}
+#DIV_FORM{
+    margin-left:300px;
+}
+#TABLE2{
+    /*text-align:left;*/
+    width:150px;
+    height:150px;
+}
+#TABLE2 tr
+{
+    height:24px;
+}
+#TABLE2 span{
+    display:none;
+}

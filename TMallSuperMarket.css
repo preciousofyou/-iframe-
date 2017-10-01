@@ -1,0 +1,235 @@
+@font-face{
+			font-family:"myFont";
+			font-size:normal;
+			font-weight:normal;
+			src:url('fonts/raphaelicons-webfont.eot') format('eot'),
+				url('fonts/raphaelicons-webfont.svg') format('svg'),
+				url('fonts/raphaelicons-webfont.ttf') format('truetype'),
+				url('fonts/raphaelicons-webfont.woff') format('woff');
+		}
+
+*{margin: 0;padding: 0;}
+ul li{list-style: none;}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+/*左侧内容*/
+#main{
+	width: 990px;
+	height: 623px;
+	margin: 0 auto;
+}
+#main>#all{
+	width: 240px;
+	height: 100%;
+	border:1px solid #ccc;
+	box-sizing: border-box;
+	float: left;
+}
+#main>#all>.product{
+	width: 232px;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+#main>#all>.product:before{
+	content: '所有商品分类';
+	display: block;
+	height: 34px;
+	line-height: 34px;
+	width: 240px;
+	background-color: #2f2f2f;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+}
+#main>#all>.product>.c1>li{
+	width: 100%;
+	height:73px;
+	padding: 19px 14px;
+	position: relative;
+	border-bottom:solid 1px #e7e7e7;
+	box-sizing: border-box;
+	color: #515151;
+	line-height: 15px;
+}
+#main>#all>.product>.c1>li.part{
+	position:relative;
+}
+
+#main>#all>.product>.c1>li.part:before{
+	content: attr(data-icon);
+	font-family: "myFont";
+	position: absolute;
+	top: 20px;left: 5%;
+	font-size:25px;
+}
+
+#main>#all>.product>.c1>li:hover{
+	background-color: #e00024 ;
+	color: #fff;
+}
+#main>#all>.product>.c1>li>a:hover{
+	color: #fff;
+}
+#main>#all>.product>.c1>li:last-child{
+	border-style: none;
+	background-color:#f3f3f3;
+}
+#main>#all>.product>.c1>li.part8>a:hover{
+	text-decoration: underline;
+}
+#main>#all>.product>.c1>li>a{
+	text-decoration: none;
+	color: #515151;
+	font-weight: bold;
+	font-size: 14px;
+	display: inline-block;
+	position: absolute;
+	text-align: center;
+	margin: 10px;
+}
+#main>#all>.product>.c1>li>a:after{
+	content: attr(data-icon);
+	font-family: "myFont";
+	position: absolute;
+	top: 19px; left: 20px;
+}
+#main>#all>.product>.c1>li>a.a2{
+	top: 19px; left: 25px;
+}
+#main>#all>.product>.c1>li>a.a1{
+	top: 19px; right: 40px;
+}
+/*右侧内容*/
+#main>#content{
+	width: 750px;
+	height: 100%;
+	float: left;
+}
+#main>#content>#nav{
+	width: 100%;
+	height: 36px;
+	line-height: 36px;
+	position: relative;
+}
+#main>#content>#nav>li{
+	height: 100%;
+	display: inline-block;
+	border-right: 1px solid #e7e7e7;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 0 20px;
+	
+}
+#main>#content>#nav>li>a{
+	text-decoration: none;
+	color: #000;
+}
+#main>#content>#nav>a#a3{
+	color: #666;
+	position: absolute;
+	top: 0;right: 40px;
+	text-decoration: none;
+	font-size: 12px;
+}
+#main>#content>#nav>a#a3:before{
+	content: attr(data-icon);
+	font-family: "myFont";
+	position: absolute;
+	top: 0;right: 50px;
+	font-size:30px;
+	color: #e00024;
+}
+#main>#content>#nav>a#a3:hover{
+	text-decoration: underline;
+}
+#main>#content>#nav>li>a:hover{
+	color:  #e00024;
+}
+/*轮播图*/
+#main>#content>#banner{
+	width: 100%;
+	height: 291px;
+	box-sizing: border-box;
+	border-top: 1px solid #000;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+#main>#content>#banner>img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 100%;
+	top: 0;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+#main>#content>#banner>img:first-child{
+	left: 0%;
+}
+#main>#content>#banner>img.show{animation-name: show;}
+#main>#content>#banner>img.hide{animation-name: hide;}
+@keyframes hide{
+	from{left: 0;}
+	to{left: -100%;}
+}
+@keyframes show{
+	from{left: 100%;}
+	to{left: 0;}
+}
+
+/*banner的title部分*/
+#main>#content>#banner>ul{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+#main>#content>#banner>ul>li{
+	display: inline-block;
+	width: 20px;height: 20px;
+	line-height: 20px;
+	text-align: center;
+	border-radius: 100%;
+	background-color: #000;
+	margin-right: 5px;
+	color: #fff;
+}
+#main>#content>#banner>ul>li:hover{
+	background-color:  #c40000;
+}
+#main>#content>#banner>ul>li.active{
+	background-color:  #c40000;
+}
+/*ban*/
+#main>#content>#ban{
+	width: 100%;
+	height:257px;
+}
+#main>#content>#ban>ul.ban1,#main>#content>#ban>ul.ban2{
+	width: 100%;
+}
+#main>#content>#ban>ul.ban1{
+	width: 100%;
+	height: 124px;
+}
+#main>#content>#ban>ul.ban1>li{
+	height: 124px;
+	float: left;
+}
+#main>#content>#ban>ul.ban1>li:hover img,#main>#content>#ban>ul.ban2>li:hover img{
+	transform: scale(1.12);
+	transition: transform 0.2s ease-in;
+}
+#main>#content>#ban>ul.ban2{
+	width: 100%;
+	height: 133px;
+}
+#main>#content>#ban>ul.ban2>li{
+	height: 133px;
+	float: left;
+}

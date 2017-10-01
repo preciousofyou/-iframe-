@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>电器</title>
+	<link rel="stylesheet" href="grid.css">
+	<script src="grid.js"></script>
+	<script>
+		function delAppli(key){
+			var msg={
+				flag:'del',
+				data:key
+			};
+			msg=JSON.stringify(msg);
+			parent.window.postMessage(msg,'*');
+		}
+		function addAppli(appliance){
+			var msg={
+				flag:'add',
+				data:appliance
+			};
+			msg=JSON.stringify(msg);
+			parent.window.postMessage(msg,'*');
+		}
+		function updataAppli(appliance){
+			var msg={
+				flag:'updata',
+				data:appliance
+			};
+			msg=JSON.stringify(msg);
+			parent.window.postMessage(msg,'*');
+		}
+		window.onmessage=function(e){
+			var msg=JSON.parse(e.data);
+			// switch(msg.flag){
+				// case 'show':
+					grid({
+						title:'我收藏的电器',
+						data:msg.data,
+						container:'body',
+						delHandler:delAppli,
+						addHandler:addAppli,
+						updateHandler:updataAppli,
+						key:'id',
+						fields:[
+							{name:'id',isKey:true},
+							{name:'name'},
+							{name:'price'},
+							{name:'brand'},
+							{name:'power'},
+							{name:'sex'},
+							{name:'height'},
+							{name:'weight'}
+						]
+					});
+				// 	break;
+				// case 'add':
+				// case 'delComplete':
+				// 	alert('删除成功');
+				// 	break;
+				// default:break;
+			// }
+		};
+	</script>
+</head>
+<body id="body">
+	
+</body>
+</html>

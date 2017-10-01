@@ -1,0 +1,128 @@
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+#main{
+	width: 1000px;
+	box-sizing: border-box;
+	margin: 0 auto;
+	min-height: 100%;
+}
+
+/*logo S*/
+#main .logo{
+	/*width: 260px;*/
+	height: 82px;
+	margin: auto;
+	background-color: #fff;
+}
+#main .logo img{margin: 0 370px;/* display: inline-block;*/}
+/*logo E*/
+/*content S*/
+#content{
+	width: 100%;
+	height: 500px;
+}
+#content .topic{
+	height: 90px;
+	/*margin-left: auto;
+	margin-right: auto;*/
+	background-color: #fff;
+}
+#content .topic img{width: 260px;margin: 0 370px;}
+#content .choice{
+	width: 1000px;
+	height: 372px;
+	background-color: #1b1b1b;
+}
+#content .choice ul li{
+	width: 162px;
+	height: 300px;
+	display: inline-block;
+}
+#content .choice ul li:nth-child(1){margin-left: 3px;}
+#content .choice ul li img:hover{border: 3px solid #28c505;}
+#content .choice ul p{
+	line-height: 45px;
+	font-size: 16px;
+	cursor: pointer;
+	color: #fff;
+	text-align: center;
+}
+#content .choice ul li.active{display:inline-block;}
+#content .choice ul p.active{color: #28c505;}
+#main .brand{
+	width: 1000px;
+	height: 450px;
+	background-color: #3d3d3d;
+}
+#main .brand p:nth-child(1){
+	font: 50px '黑体';
+	text-align: center;
+	color: #454545;
+}
+#main .brand p:nth-child(2){
+	font: 26px '黑体';
+	text-align: center;
+	color: #454545;
+}
+
+#main .brand p span{
+	font-size: 50px;
+}
+#main .brand .media{
+	width: 900px;
+	height: 200px;
+	background-color: #454545;
+	margin: 40px auto;
+}
+#main .brand .media ul{}
+#main .brand .media ul li{
+	width: 92px;
+	height: 47px;
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 6px;
+	margin-top: 35px;
+}
+#main .brand .in{
+	text-align: center;
+}
+#main .brand .in a{
+	color: #334;
+	font: 26px '黑体';
+}
+#main #service{
+	width: 1000px;
+	height: 170px;
+}
+#main .service img{margin-right: 30px;}
+#main #about{width: 1000px;height: 200px;border-bottom: 1px solid #ff0035;}
+#main #about .one,#main #about .two,#main #about .three,
+#main #about .four,#main #about .five{
+	width: 20%;
+	height: 200px;
+	float: left;
+}
+#main #about .one ul,#main #about .two ul,#main #about .three ul,
+#main #about .four ul,#main #about .five ul{
+	height: 200px;
+	text-align: center;
+	line-height: 25px;
+	font: 22px '黑体';
+	color: #444;
+}
+#main #about .one ul li a,#main #about .two ul li a,#main #about .three ul li a,
+#main #about .four ul li a,#main #about .five ul li a{
+	text-decoration: none;
+	font: 15px '微软雅黑';
+	color: #555;
+}
+#main #about .one{position: relative;}
+#main #about .one .img{
+	position: absolute;
+	bottom: 0;left: 75px
+}
+/*content E
